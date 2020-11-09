@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prize{% endblock %}
+
+{% block body %}
+     Ваш приз - {{ format_prize(prize) }}
+     <br/>
+     <a href="{{ path('accept_prize', {prize:prize.id}) }}">Получить</a>
+     <a href="{{ path('index') }}">Отказаться</a>
+{% endblock %}
